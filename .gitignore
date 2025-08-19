@@ -1,2 +1,3 @@
 *.code-workspace
 settings.json
+.github/workflows
