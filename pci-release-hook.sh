@@ -3,8 +3,8 @@
 # Drop this in /etc/pve/hooks/ or /etc/pve/local/ and attach via hookscript:
 
 # Replace with your actual PCI IDs
-GPU_ID="0000:67:00.0"
-AUDIO_ID="0000:67:00.1"
+GPU_ID="0000:42:00.0"
+AUDIO_ID="0000:42:00.1"
 
 log() {
 	echo "[GPU-HOOK] $1"
