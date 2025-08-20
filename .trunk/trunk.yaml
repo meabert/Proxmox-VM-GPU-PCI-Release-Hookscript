@@ -35,21 +35,24 @@ lint:
     - trufflehog@3.90.5
 actions:
   disabled:
+    - terraform-docs
     - trunk-single-player-auto-upgrade
     - trunk-single-player-auto-on-upgrade
     - trunk-announce
-    - trunk-check-pre-push
   enabled:
+    - trunk-check-pre-push
     - trunk-fmt-pre-commit
     - trunk-check-pre-commit
-    - terraform-docs
     - submodule-init-update
     - git-blame-ignore-revs
     - git-lfs
     - trunk-upgrade-available
 tools:
   disabled:
+    - terraform-docs
   enabled:
+    - terraform@1.1.4
+    - tofu@1.10.5
     - flake8@7.3.0
     - gh@2.76.2
     - trunk-toolbox@0.5.4

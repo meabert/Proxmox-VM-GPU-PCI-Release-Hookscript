@@ -12,34 +12,34 @@ log() {
 
 release_device() {
 	local DEV=$1
-	if [ -e "/sys/bus/pci/devices/$DEV/remove" ]; then
-		echo 1 >"/sys/bus/pci/devices/$DEV/remove"
-		log "Removed $DEV from PCI bus"
+	if [[ -e "/sys/bus/pci/devices/${DEV}/remove" ]]; then
+		echo 1 >"/sys/bus/pci/devices/${DEV}/remove"
+		log "Removed ${DEV} from PCI bus"
 	else
-		log "Device $DEV not found for removal"
+		log "Device ${DEV} not found for removal"
 	fi
 }
 
 rescan_device() {
 	local DEV=$1
-	if [ -e "/sys/bus/pci/devices/$DEV/rescan" ]; then
-		echo 1 >"/sys/bus/pci/devices/$DEV/rescan"
-		log "Rescanned $DEV"
+	if [[ -e "/sys/bus/pci/devices/${DEV}/rescan" ]]; then
+		echo 1 >"/sys/bus/pci/devices/${DEV}/rescan"
+		log "Rescanned ${DEV}"
 	else
-		log "Device $DEV not found for rescan"
+		log "Device ${DEV} not found for rescan"
 	fi
 }
 
 case "$2" in
 pre-stop)
 	log "VM $1 is stopping — releasing GPU..."
-	release_device "$GPU_ID"
-	release_device "$AUDIO_ID"
+	release_device "${GPU_ID}"
+	release_device "${AUDIO_ID}"
 	;;
 post-stop)
 	log "VM $1 has stopped — rescanning GPU..."
-	rescan_device "$GPU_ID"
-	rescan_device "$AUDIO_ID"
+	rescan_device "${GPU_ID}"
+	rescan_device "${AUDIO_ID}"
 	;;
 *)
 	log "Hook triggered for VM $1 with phase '$2' — no action taken."
