@@ -1,6 +1,7 @@
 # Proxmox PCI Device Reset for VMs #
 
-![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)![GitHub commit activity](https://img.shields.io/github/commit-activity/t/meabert/Proxmox-VM-GPU-PCI-Release-Hookscript)
+![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)![GitHub commit activity](https://img.shields.io/github/commit-activity/t/meabert/Proxmox-VM-GPU-PCI-Release-Hookscript)![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/meabert/Proxmox-VM-GPU-PCI-Release-Hookscript)
+
 
 In certain situations PCI/GPU devices are not properly removed from a VM when
 shutdown or restarted. Previous where a host system reboot was used, this

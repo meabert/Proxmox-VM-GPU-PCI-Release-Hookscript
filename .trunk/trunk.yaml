@@ -23,6 +23,7 @@ lint:
       linters: 
         - ALL
   disabled:
+    - vale
     - prettier
   enabled:
     - semgrep@1.132.1
@@ -53,6 +54,7 @@ tools:
   disabled:
     - terraform-docs
   enabled:
+    - trivy@0.65.0
     - terraform@1.1.4
     - tofu@1.10.5
     - flake8@7.3.0
