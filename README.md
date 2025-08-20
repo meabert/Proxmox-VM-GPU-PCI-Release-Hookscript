@@ -37,6 +37,7 @@ Move the script to a valid snippet directory for simplicity.
 ```bash
 cp pci-release-hook.sh /var/lib/vz/snippets/pci-release-hook.sh
 ```
-/etc/pve/local
-
-hookscript: local:/etc/pve/hooks/pci-release-hook.sh
+Run some tests on the VM, shut down, restart and validate the
+device shows up afterwards. This script will essentially clear
+out this device and release it back to the host. No hard reboot
+should be necessary.
