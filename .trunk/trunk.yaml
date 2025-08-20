@@ -35,6 +35,7 @@ lint:
     - trufflehog@3.90.5
 actions:
   disabled:
+    - git-lfs
     - terraform-docs
     - trunk-single-player-auto-upgrade
     - trunk-single-player-auto-on-upgrade
@@ -45,7 +46,6 @@ actions:
     - trunk-check-pre-commit
     - submodule-init-update
     - git-blame-ignore-revs
-    - git-lfs
     - trunk-upgrade-available
 tools:
   disabled:
