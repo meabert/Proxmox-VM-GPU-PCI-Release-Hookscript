@@ -1,4 +1,4 @@
-# Proxmox-VM-GPU-PCI-Release-Hookscript #
+# Proxmox PCI Device Reset for VMs #
 
 ![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
