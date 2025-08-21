@@ -26,16 +26,16 @@ an unplanned restart is triggered.
 > context - any experienced operator should be able to connect other symptoms
 > to these cases using Root Cause Analysis (RCA)
 <!-- markdownlint-disable-next-line -->
-**<ins>Case Symptoms</ins>**
+### Case Symptoms ###
 <!-- markdownlint-disable-next-line -->
-<sup>Local LLM:</sup> if an LLM is either extremely slow or has stopped
+**<sup>Local LLM:</sup>** if an LLM is either extremely slow or has stopped
 responding completely validate GPU presence with the manuafacturer monitoring
 tool `nvidia-smi`, `intel_gpu_top` or `amdgpu_top` if the device cannot be
 found or the command gives errors there's a good chance the device
 was not properly returned to the host. This is an ideal candidate for
 hook testing.
 <!-- markdownlint-disable-next-line -->
-<sup>TrueNAS:</sup>after a reboot the HBA disappears and all or some ZFS disks
+**<sup>TrueNAS:</sup>** after a reboot the HBA disappears and all or some ZFS disks
 are in the red. (Don't panic and don't export any dataset!) Check if
 the HBA is visible with the manufacturer monitoring tool - these are
 already included with TrueNAS - change directories to `cd /usr/local/sbin`
