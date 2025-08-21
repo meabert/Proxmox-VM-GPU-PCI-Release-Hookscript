@@ -26,6 +26,9 @@ lint:
     - vale
     - prettier
   enabled:
+    - markdownlint-cli2@0.18.1
+    - pre-commit-hooks@6.0.0
+    - trunk-toolbox@0.5.4
     - semgrep@1.132.1
     - trufflehog-git@3.90.5
     - shellcheck@0.11.0
@@ -54,6 +57,7 @@ tools:
   disabled:
     - terraform-docs
   enabled:
+    - markdownlint-cli2@0.18.1
     - trivy@0.65.0
     - terraform@1.1.4
     - tofu@1.10.5
